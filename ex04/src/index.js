@@ -4,18 +4,17 @@ class Pets {
         this.legs = legs;
     }
     walk(){
-        var numberOfLegs = this.name + " is walking on " + this.legs + " legs";
+        var numberOfLegs = (`${this.name} is walking on ${this.legs} legs`);
         return numberOfLegs;
     }
 }
 class Dog extends Pets {
     constructor(name, legs){
-        super(name, legs);
-        
-
+        super(name);
+        this.legs = legs;
     }
     bark(){
-        var dogSay = this.name + " says WUF-WUF";
+        var dogSay = (`${this.name} says WUF-WUF`);
         return dogSay;
     }
 }

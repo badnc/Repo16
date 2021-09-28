@@ -1,5 +1,3 @@
-const { firstName, lastName} = require('./nameFunction');
+const person = require('./nameFunction');
 
-var person = firstName + lastName;
-
-console.log(person);
+console.log(person.firstName("JOHN"), person.lastName("doe"));

@@ -1,16 +1,16 @@
 class Microsoft {
     constructor(name){
-        this.name = name;
+        this._name = name;
     }
-    get name(Name) {
-        this.name = Name;
+    get name() {
+        return this._name;
     }
-    set name(Name){
-        this.name = Name;
+    set name(setName){
+        this._name = setName;
     }
     
     occupation() {
-        return this.name + " is a philanthropist!"
+        return (`${this._name} is philanthropist!`);
     }
 }
 class Facebook extends Microsoft {
@@ -19,13 +19,18 @@ class Facebook extends Microsoft {
         this.age = age;
     }
     studentAge() {
-        return this.name + " is " + this.age;
+        return (`${this.name} is ${this.age}`);
     }
 
-    henry() {
-
-    }
 }
+
+var henry = new Microsoft("William Henry Gates III");
+var elliot = new Facebook("Mark Elliot Zuckerberg", 23);
+
+console.log(henry.occupation());
+console.log(elliot.occupation());
+console.log(elliot.studentAge());
+
 module.exports = {
     Microsoft,
     Facebook
